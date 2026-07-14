@@ -29,7 +29,7 @@ pip install numpy pandas matplotlib biopython
 
 ## 🚀 How to Run the Notebook
 1. Clone this repository or download the `protein-identifier.ipynb` file.
-2. Place the Mystery-Gene.txt sequence files in the `/data` directory. 
+2. Place the `Mystery-Gene.txt` sequence files in the `/data` directory. 
 3. Open your terminal and start Jupyter: `jupyter notebook`.
 4. Open `protein-identifier.ipynb` and run the cells sequentially.
 
