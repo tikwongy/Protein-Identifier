@@ -1,53 +1,56 @@
 # Protein-Identifier
 This python code works on jupyter notebook.
 
-# [Project Title: Protein-Identifier]
+# Project Title: Protein-Identifier
 
-A Jupyter Notebook workflow designed to take raw gene sequences, translate them into amino acids, and identify the corresponding proteins using NCBI BLAST.
+A Jupyter Notebook workflow designed to take raw nucleotide sequences, translate them into amino acids, and identify the corresponding proteins using NCBI BLAST.
 
 ## 📌 Project Overview
-* **What is the goal of this project?** [Describe the specific biological or computational problem you are solving]
-* **Why is this project useful?** [Explain who would benefit from using this tool and why it matters]
-* **What dataset or input sequence does this focus on?** [e.g., Human hemoglobin genes, viral spike proteins, or a sample FASTA file]
+* **What is the goal of this project?**
+* Using BLAST homology searches to try to identify an unknown DNA sequence. 
+* **Why is this project useful?**
+* Translate a nucleotide sequence to protein by running BLAST searchesn with the BLAST module in Biopython
+* **What dataset or input sequence does this focus on?**
+* Cell division protein FtsZ [Pseudomonas aeruginosa]
 
 ## 🧬 Biological Workflow
 Briefly explain the pipeline steps implemented in your notebook:
-1. **Input**: [e.g., Reading a raw FASTA file containing DNA sequences]
-2. **Translation**: [e.g., Using Biopython's `Seq` module to find open reading frames (ORFs) and translate them]
-3. **Identification**: [e.g., Submitting protein strings via `NCBIWWW.qblast` to the Non-Redundant (`nr`) database]
-4. **Output**: [e.g., Exporting top organism matches and E-values to an XML/CSV report]
+1. **Input**: Reading a raw nucleotide sequence file named Mystery_Gene.txt
+2. **Translation**: Translating the nucleotide sequence to RNA sequence. Then, translating the RNA sequence to codon list. At last, translating the codon list to an amino acids strings
+3. **Identification**: Submitting protein strings via `NCBIWWW.qblast` to the Non-Redundant (`nr`) database
+4. **Output**: Exporting top organism matches and E-values 
 
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
 Make sure you have the following software installed:
-* Python 3.x
+* Python 3.14.5
 * Jupyter Notebook or JupyterLab
 
 ### Required Libraries
 To run this notebook, you need to install the following dependencies. Run this command in your terminal:
 ```bash
-pip install biopython pandas matplotlib
+pip install numpy pandas matplotlib biopython
 ```
 
 ## 🚀 How to Run the Notebook
-1. Clone this repository or download the `.ipynb` file.
-2. Place your target gene sequence files in the `[insert folder name, e.g., /data]` directory.
+1. Clone this repository or download the `protein-identifier.ipynb` file.
+2. Place the Mystery-Gene.txt sequence files in the `/data` directory. 
 3. Open your terminal and start Jupyter: `jupyter notebook`.
-4. Open `[Your_Notebook_Name].ipynb` and run the cells sequentially.
+4. Open `protein-identifier.ipynb` and run the cells sequentially.
 
 ## 📊 Sample Results
-* **Top Hit Identified**: [e.g., Hemoglobin subunit beta (Homo sapiens)]
-* **E-value / Confidence**: [e.g., 0.0 or 1e-115]
-* **Visualizations Included**: [Mention if your notebook generates sequence length histograms, BLAST score charts, etc.]
+* **Top Hit Identified**: Cell division protein FtsZ [Pseudomonas aeruginosa]
+* **E-value / Confidence**: 0.0
+* **Visualizations Included**:
+*  'ref|WP_011666751.1| cell division protein FtsZ [Pseudomonas aeruginosa] >gb|ABJ15653.1| cell division protein FtsZ [Pseudomonas aeruginosa UCBPP-PA14]'
+* Sequence: ref|WP_011666751.1| cell division protein FtsZ [Pseudomonas aeruginosa] >gb|ABJ15653.1| cell division protein FtsZ [Pseudomonas aeruginosa UCBPP-PA14]
+* length: 394
+* e value: 0.0
 
 ## ⚠️ Important Considerations / Limitations
 * **Internet Dependence**: The notebook uses the online NCBI BLAST API (`NCBIWWW.qblast`). Large batches of sequences may take a long time to run or risk being throttled by NCBI servers. 
-* **Local Alternative**: [Mention here if you recommend users download local BLAST+ software for larger workflows]
-
-## 📝 License
-This project is licensed under the [e.g., MIT License] - see the LICENSE file for details.
 
 ## 👥 Authors & Acknowledgments
-* **Author**: [Your Name/GitHub Handle]
-* **Acknowledgments**: Thanks to [Biopython developers / NCBI BLAST services / academic courses].
+* **Author**: Tik YuenWah Wong
+* **Acknowledgments**: Thanks to Biopython developers / NCBI BLAST services / CalTach IPBR Coding Course: Introduction to Programming for Biological Research
