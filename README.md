@@ -49,7 +49,7 @@ pip install numpy pandas matplotlib biopython
 
 ## 👥 Authors & Acknowledgments
 * **Author**: Tik YuenWah Wong
-* **Acknowledgments**: Thanks to
+* **Acknowledgments**: Thanks to:
   *  Biopython developers
   *  NCBI BLAST services
   *  CalTach IPBR Coding Course: Introduction to Programming for Biological Research
