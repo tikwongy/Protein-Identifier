@@ -1,6 +1,3 @@
-# Protein-Identifier
-This python code works on jupyter notebook.
-
 # Project Title: Protein-Identifier
 
 A Jupyter Notebook workflow designed to take raw nucleotide sequences, translate them into amino acids, and identify the corresponding proteins using NCBI BLAST.
